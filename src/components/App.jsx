@@ -6,7 +6,7 @@ class App extends Component {
   state = {};
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/customers" />} />
           <Route path="/customers" component={Customers}></Route>
